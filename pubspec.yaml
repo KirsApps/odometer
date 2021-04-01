@@ -1,0 +1,17 @@
+name: odometer
+description: Highly customizable widgets used to number transition animation.
+version: 1.0.0
+homepage:
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  pedantic: 1.9.2
+
+
