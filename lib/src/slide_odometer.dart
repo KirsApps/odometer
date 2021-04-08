@@ -22,11 +22,15 @@ class AnimatedSlideOdometerNumber extends StatelessWidget {
   /// Vertical offset what is used to translate digits
   final double verticalOffset;
 
+  /// The curve to apply when animating the odometer number.
+  final Curve curve;
+
   AnimatedSlideOdometerNumber(
       {Key key,
       @required this.odometerNumber,
       @required this.duration,
       this.numberTextStyle,
+      this.curve = Curves.linear,
       @required this.letterWidth,
       this.verticalOffset = 20,
       this.groupSeparator})
@@ -37,6 +41,7 @@ class AnimatedSlideOdometerNumber extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AnimatedOdometer(
+        curve: curve,
         odometerNumber: odometerNumber,
         transitionIn: (value, place, animation) => _buildSlideOdometerDigit(
             value,
