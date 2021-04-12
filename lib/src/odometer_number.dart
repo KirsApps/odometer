@@ -37,21 +37,20 @@ class OdometerNumber {
   /// Linearly interpolate between two numbers
   static OdometerNumber lerp(
       OdometerNumber start, OdometerNumber end, double t) {
-    if (start == null && end == null) return null;
-    final _start = start ?? OdometerNumber(0);
-    final _end = end ?? OdometerNumber(0);
+    assert(start != null);
+    assert(end != null);
 
-    var keyLength = max(_start.digits.length, _end.digits.length);
+    var keyLength = max(start.digits.length, end.digits.length);
     var digits = <int, double>{};
     for (var i = 1; i <= keyLength; i++) {
-      digits[i] = lerpDouble(_start.digits[i], _end.digits[i], t);
+      digits[i] = lerpDouble(start.digits[i], end.digits[i], t);
     }
     return OdometerNumber.fromDigits(digits);
   }
 
   @override
   String toString() {
-    return 'OdometerNumber $number $digits';
+    return 'OdometerNumber $number';
   }
 }
 
@@ -63,8 +62,9 @@ class OdometerNumber {
 class OdometerTween extends Tween<OdometerNumber> {
   /// Creates a [OdometerNumber] tween.
   ///
-  /// The [begin] and [end] properties may be null; the null value
-  /// is treated as an zero number.
+  /// The [begin] and [end] properties must be non-null before the tween is
+  /// first used, but the arguments can be null if the values are going to be
+  /// filled in later.
   OdometerTween({OdometerNumber begin, OdometerNumber end})
       : super(begin: begin, end: end);
 
