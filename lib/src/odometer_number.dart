@@ -6,7 +6,7 @@ import 'package:flutter/widgets.dart';
 /// Odometer number used in widgets [AnimatedOdometer] and [OdometerTransition]
 class OdometerNumber {
   final int number;
-  final Map<int, double?> digits;
+  final Map<int, double> digits;
 
   ///Creates [OdometerNumber] from given [number]
   OdometerNumber(this.number) : digits = generateDigits(number);
@@ -17,7 +17,7 @@ class OdometerNumber {
   ///Returns generated digits from given [number]
   static Map<int, double> generateDigits(int number) {
     var digits = <int, double>{};
-    if (number == 0) return {1: 0};
+    if (number <= 0) return {1: 0};
     var v = number;
     var place = 1;
     while (v > 0) {
@@ -38,9 +38,9 @@ class OdometerNumber {
   static OdometerNumber lerp(
       OdometerNumber start, OdometerNumber end, double t) {
     var keyLength = max(start.digits.length, end.digits.length);
-    var digits = <int, double?>{};
+    var digits = <int, double>{};
     for (var i = 1; i <= keyLength; i++) {
-      digits[i] = lerpDouble(start.digits[i], end.digits[i], t);
+      digits[i] = lerpDouble(start.digits[i], end.digits[i], t)!;
     }
     return OdometerNumber.fromDigits(digits);
   }
