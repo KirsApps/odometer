@@ -14,10 +14,10 @@ class AnimatedSlideOdometerNumber extends StatelessWidget {
   final double letterWidth;
 
   /// A widget that is used to separate digit groups.
-  final Widget groupSeparator;
+  final Widget? groupSeparator;
 
   /// TextStyle for digits
-  final TextStyle numberTextStyle;
+  final TextStyle? numberTextStyle;
 
   /// Vertical offset what is used to translate digits
   final double verticalOffset;
@@ -26,17 +26,15 @@ class AnimatedSlideOdometerNumber extends StatelessWidget {
   final Curve curve;
 
   AnimatedSlideOdometerNumber(
-      {Key key,
-      @required this.odometerNumber,
-      @required this.duration,
+      {Key? key,
+      required this.odometerNumber,
+      required this.duration,
       this.numberTextStyle,
       this.curve = Curves.linear,
-      @required this.letterWidth,
+      required this.letterWidth,
       this.verticalOffset = 20,
       this.groupSeparator})
-      : assert(odometerNumber != null),
-        assert(duration != null),
-        super(key: key);
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -73,23 +71,22 @@ class AnimatedSlideOdometerTransition extends StatelessWidget {
   final double letterWidth;
 
   /// A widget that is used to separate digit groups.
-  final Widget groupSeparator;
+  final Widget? groupSeparator;
 
   /// TextStyle for digits
-  final TextStyle numberTextStyle;
+  final TextStyle? numberTextStyle;
 
   /// Vertical offset what is used to translate digits
   final double verticalOffset;
 
   AnimatedSlideOdometerTransition(
-      {Key key,
-      @required this.odometerAnimation,
+      {Key? key,
+      required this.odometerAnimation,
       this.numberTextStyle,
-      @required this.letterWidth,
+      required this.letterWidth,
       this.verticalOffset = 20,
       this.groupSeparator})
-      : assert(odometerAnimation != null),
-        super(key: key);
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -120,8 +117,8 @@ Widget _buildSlideOdometerDigit(
     int place,
     double opacity,
     double offsetY,
-    Widget thousandSeparator,
-    TextStyle numberTextStyle,
+    Widget? thousandSeparator,
+    TextStyle? numberTextStyle,
     double letterWidth) {
   if (thousandSeparator != null && place % 3 == 0) {
     return Row(
@@ -136,7 +133,7 @@ Widget _buildSlideOdometerDigit(
 }
 
 Widget _valueText(int value, double opacity, double offsetY,
-        TextStyle numberTextStyle, double letterWidth) =>
+        TextStyle? numberTextStyle, double letterWidth) =>
     Transform.translate(
         offset: Offset(0, offsetY),
         child: Opacity(

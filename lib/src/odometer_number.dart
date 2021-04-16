@@ -6,13 +6,13 @@ import 'package:flutter/widgets.dart';
 /// Odometer number used in widgets [AnimatedOdometer] and [OdometerTransition]
 class OdometerNumber {
   final int number;
-  final Map<int, double> digits;
+  final Map<int, double?> digits;
 
   ///Creates [OdometerNumber] from given [number]
   OdometerNumber(this.number) : digits = generateDigits(number);
 
   ///Creates [OdometerNumber] from given [digits].
-  OdometerNumber.fromDigits(this.digits) : number = digits[1].toInt();
+  OdometerNumber.fromDigits(this.digits) : number = digits[1]!.toInt();
 
   ///Returns generated digits from given [number]
   static Map<int, double> generateDigits(int number) {
@@ -37,11 +37,8 @@ class OdometerNumber {
   /// Linearly interpolate between two numbers
   static OdometerNumber lerp(
       OdometerNumber start, OdometerNumber end, double t) {
-    assert(start != null);
-    assert(end != null);
-
     var keyLength = max(start.digits.length, end.digits.length);
-    var digits = <int, double>{};
+    var digits = <int, double?>{};
     for (var i = 1; i <= keyLength; i++) {
       digits[i] = lerpDouble(start.digits[i], end.digits[i], t);
     }
@@ -65,10 +62,10 @@ class OdometerTween extends Tween<OdometerNumber> {
   /// The [begin] and [end] properties must be non-null before the tween is
   /// first used, but the arguments can be null if the values are going to be
   /// filled in later.
-  OdometerTween({OdometerNumber begin, OdometerNumber end})
+  OdometerTween({OdometerNumber? begin, OdometerNumber? end})
       : super(begin: begin, end: end);
 
   /// Returns the value this variable has at the given animation clock value.
   @override
-  OdometerNumber lerp(double t) => OdometerNumber.lerp(begin, end, t);
+  OdometerNumber lerp(double t) => OdometerNumber.lerp(begin!, end!, t);
 }
