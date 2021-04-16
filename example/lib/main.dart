@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
+  MyHomePage({Key? key, required this.title}) : super(key: key);
 
   final String title;
 
@@ -31,8 +31,8 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage>
     with SingleTickerProviderStateMixin {
   int _counter = 10000;
-  AnimationController animationController;
-  Animation<OdometerNumber> animation;
+  AnimationController? animationController;
+  late Animation<OdometerNumber> animation;
   void _incrementCounter() {
     setState(() {
       _counter += 88;
@@ -43,10 +43,10 @@ class _MyHomePageState extends State<MyHomePage>
   void initState() {
     animationController =
         AnimationController(duration: Duration(seconds: 2), vsync: this);
-    animation = OdometerTween(
-            begin: OdometerNumber(10000), end: OdometerNumber(12000))
-        .animate(
-            CurvedAnimation(curve: Curves.easeIn, parent: animationController));
+    animation =
+        OdometerTween(begin: OdometerNumber(10000), end: OdometerNumber(12000))
+            .animate(CurvedAnimation(
+                curve: Curves.easeIn, parent: animationController!));
     super.initState();
   }
 
@@ -85,10 +85,10 @@ class _MyHomePageState extends State<MyHomePage>
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   ElevatedButton(
-                      onPressed: () => animationController.reverse(),
+                      onPressed: () => animationController!.reverse(),
                       child: Text('Reverse')),
                   ElevatedButton(
-                      onPressed: () => animationController.forward(),
+                      onPressed: () => animationController!.forward(),
                       child: Text('Forward'))
                 ],
               ),
