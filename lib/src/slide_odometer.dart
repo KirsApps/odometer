@@ -117,13 +117,13 @@ Widget _buildSlideOdometerDigit(
     int place,
     double opacity,
     double offsetY,
-    Widget? thousandSeparator,
+    Widget? groupSeparator,
     TextStyle? numberTextStyle,
     double letterWidth) {
-  if (thousandSeparator != null && place % 3 == 0) {
+  if (groupSeparator != null && place % 3 == 0) {
     return Row(
       children: [
-        thousandSeparator,
+        groupSeparator,
         _valueText(value, opacity, offsetY, numberTextStyle, letterWidth)
       ],
     );

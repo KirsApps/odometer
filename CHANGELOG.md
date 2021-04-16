@@ -1,3 +1,7 @@
+## [2.0.0] - 04.16.2021.
+
+* Null safety migration
+
 ## [1.0.2] - 04.12.2021.
 
 * Added assertion to OdometerNumber.lerp
