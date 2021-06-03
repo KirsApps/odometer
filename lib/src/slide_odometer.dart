@@ -63,7 +63,7 @@ class AnimatedSlideOdometerNumber extends StatelessWidget {
 
 ///ExplicitlyAnimatedWidget based on [OdometerTransition]
 ///with slide and fade digits transition
-class AnimatedSlideOdometerTransition extends StatelessWidget {
+class SlideOdometerTransition extends StatelessWidget {
   final Animation<OdometerNumber> odometerAnimation;
 
   ///The width of the SizedBox widget around each digit
@@ -79,7 +79,7 @@ class AnimatedSlideOdometerTransition extends StatelessWidget {
   /// Vertical offset what is used to translate digits
   final double verticalOffset;
 
-  AnimatedSlideOdometerTransition(
+  SlideOdometerTransition(
       {Key? key,
       required this.odometerAnimation,
       this.numberTextStyle,

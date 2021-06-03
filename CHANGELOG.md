@@ -1,3 +1,11 @@
+## [2.1.0] - 06.03.2021.
+
+* Breaking Change: Renamed AnimatedSlideOdometerTransition to SlideOdometerTransition
+
+## [2.0.1] - 06.03.2021.
+
+* Fixed group separator
+
 ## [2.0.0] - 04.16.2021.
 
 * Null safety migration

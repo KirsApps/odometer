@@ -73,7 +73,7 @@ class _MyHomePageState extends State<MyHomePage>
                 numberTextStyle: TextStyle(fontSize: 20)),
             Padding(
               padding: EdgeInsets.only(top: 30),
-              child: AnimatedSlideOdometerTransition(
+              child: SlideOdometerTransition(
                 letterWidth: 20,
                 odometerAnimation: animation,
                 numberTextStyle: TextStyle(fontSize: 20),

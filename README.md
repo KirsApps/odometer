@@ -6,7 +6,7 @@ Package which was inspired by the package [Odometer js](https://github.hubspot.c
 
 In this package you will find **pre-built** widgets:
   * AnimatedSlideOdometerNumber
-  * AnimatedSlideOdometerTransition
+  * SlideOdometerTransition
 
 and **high modifiable** widgets:
   * AnimatedOdometer
@@ -23,12 +23,12 @@ with a slide and fade digits transition.
      duration: Duration(seconds: 1))
 ```
 
-## AnimatedSlideOdometerTransition
+## SlideOdometerTransition
 
 ExplicitlyAnimatedWidget based on OdometerTransition
 with a slide and fade digits transition
 ```dart 
-    AnimatedSlideOdometerTransition(
+    SlideOdometerTransition(
       numberTextStyle: TextStyle(fontSize: 15),
       odometerAnimation: _odometerAnimation,
       duration: Duration(seconds: 1))
