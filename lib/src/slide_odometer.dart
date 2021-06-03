@@ -120,11 +120,12 @@ Widget _buildSlideOdometerDigit(
     Widget? groupSeparator,
     TextStyle? numberTextStyle,
     double letterWidth) {
-  if (groupSeparator != null && place % 3 == 0) {
+  final d = place - 1;
+  if (groupSeparator != null && (d != 0 && d % 3 == 0)) {
     return Row(
       children: [
+        _valueText(value, opacity, offsetY, numberTextStyle, letterWidth),
         groupSeparator,
-        _valueText(value, opacity, offsetY, numberTextStyle, letterWidth)
       ],
     );
   } else {
