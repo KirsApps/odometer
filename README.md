@@ -1,16 +1,22 @@
 # Odometer
 
-![Gif](https://github.com/KirsApps/odometer/blob/master/assets/preview.gif "Fancy Gif")
-
 Package which was inspired by the package [Odometer js](https://github.hubspot.com/odometer/).
 
+Examples of counter animation customization made using this package:
+
+![Gif](https://github.com/KirsApps/odometer/blob/master/assets/1.gif "Fancy Gif")
+
+![Gif](https://github.com/KirsApps/odometer/blob/master/assets/2.gif "Fancy Gif")
+
+![Gif](https://github.com/KirsApps/odometer/blob/master/assets/3.gif "Fancy Gif")
+
 In this package you will find **pre-built** widgets:
-  * AnimatedSlideOdometerNumber
-  * SlideOdometerTransition
+* AnimatedSlideOdometerNumber
+* SlideOdometerTransition
 
 and **high modifiable** widgets:
-  * AnimatedOdometer
-  * OdometerTransition
+* AnimatedOdometer
+* OdometerTransition
 
 ## AnimatedSlideOdometerNumber
 
@@ -37,7 +43,7 @@ with a slide and fade digits transition
 ## Base widgets AnimatedOdometer and OdometerTransition
 
 AnimatedOdometer based on Implicit Animations and OdometerTransition based on explicit animation.
-to customize the odometer, you need to use two OdometerAnimationTransitionBuilders 
+to customize the odometer, you need to use two OdometerAnimationTransitionBuilders
 for new and old numbers you will have access to:
 * digit
 * digit place
