@@ -3,26 +3,26 @@ import 'package:flutter/widgets.dart';
 import 'odometer_animation.dart';
 import 'odometer_number.dart';
 
-///[ImplicitlyAnimatedWidget] based on [AnimatedOdometer]
-///with slide and fade digits transition
+/// The [ImplicitlyAnimatedWidget] uses the [AnimatedOdometer]
+/// with slide and fade digits transitions.
 class AnimatedSlideOdometerNumber extends StatelessWidget {
   final OdometerNumber odometerNumber;
   final Duration duration;
 
-  ///The width of the SizedBox widget around each digit
-  ///to avoid the movement of the digits when they change
+  /// The width of the SizedBox widget around each digit avoids the movement
+  /// of the digits when they change.
   final double letterWidth;
 
   /// A widget that is used to separate digit groups.
   final Widget? groupSeparator;
 
-  /// TextStyle for digits
+  /// The digit's [TextStyle].
   final TextStyle? numberTextStyle;
 
-  /// Vertical offset what is used to translate digits
+  /// The vertical offset is used to translate digits.
   final double verticalOffset;
 
-  /// The curve to apply when animating the odometer number.
+  /// The curve animates the odometer number.
   final Curve curve;
 
   AnimatedSlideOdometerNumber(
@@ -61,22 +61,22 @@ class AnimatedSlideOdometerNumber extends StatelessWidget {
   }
 }
 
-///ExplicitlyAnimatedWidget based on [OdometerTransition]
-///with slide and fade digits transition
+/// The ExplicitlyAnimatedWidget uses the [OdometerTransition]
+/// with slide and fade digits transition.
 class SlideOdometerTransition extends StatelessWidget {
   final Animation<OdometerNumber> odometerAnimation;
 
-  ///The width of the SizedBox widget around each digit
-  ///to avoid the movement of the digits when they change
+  /// The width of the SizedBox widget around each digit avoids the movement
+  /// of the digits when they change.
   final double letterWidth;
 
   /// A widget that is used to separate digit groups.
   final Widget? groupSeparator;
 
-  /// TextStyle for digits
+  /// The digit's [TextStyle].
   final TextStyle? numberTextStyle;
 
-  /// Vertical offset what is used to translate digits
+  /// The vertical offset is used to translate digits.
   final double verticalOffset;
 
   SlideOdometerTransition(

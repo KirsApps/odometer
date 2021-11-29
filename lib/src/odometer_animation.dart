@@ -3,15 +3,15 @@ import 'package:flutter/widgets.dart';
 import 'odometer.dart';
 import 'odometer_number.dart';
 
-/// Signature for builders used to generate custom transitions for
-/// [OdometerNumber].
+/// The signature for builders used to generate custom transitions for
+/// the [OdometerNumber].
 ///
-/// The function should return a widget which wraps the given `value`. It may
-/// also use the `place` and `animation` to inform its transition. It must not return null.
+/// The function should return a widget that wraps the given `value`. It may
+/// also use the `place` and the `animation` to inform its transition. It must not return null.
 typedef OdometerAnimationTransitionBuilder = Widget Function(
     int value, int place, double animation);
 
-/// Animated [OdometerNumber] which automatically transitions from one number to another
+/// The animated [OdometerNumber] automatically transitions from one number to another
 /// over a given duration whenever the given [odometerNumber] changes.
 class AnimatedOdometer extends ImplicitlyAnimatedWidget {
   AnimatedOdometer({
@@ -26,14 +26,14 @@ class AnimatedOdometer extends ImplicitlyAnimatedWidget {
 
   final OdometerNumber odometerNumber;
 
-  /// А function that returns a widget for each digit of the odometer number.
+  /// The function returns a widget for each digit of the odometer number.
   /// For example, when changing the number from 6 to 7,
-  /// this function will be used on the number 6
+  /// this function will be used on the number 6.
   final OdometerAnimationTransitionBuilder transitionOut;
 
-  /// А function that returns a widget for each digit of the odometer number.
+  /// The function returns a widget for each digit of the odometer number.
   /// For example, when changing the number from 6 to 7,
-  /// this function will be used on the number 7
+  /// this function will be used on the number 7.
   final OdometerAnimationTransitionBuilder transitionIn;
 
   @override
@@ -59,11 +59,11 @@ class _AnimatedOdometerState extends AnimatedWidgetBaseState<AnimatedOdometer> {
   }
 }
 
-/// Animates the [OdometerNumber]
-
+/// The explicitly animated widget that transitions the [OdometerNumber] by
+/// the given [odometerAnimation].
 class OdometerTransition extends AnimatedWidget {
-  /// Creates a odometer number transition.
-
+  /// Creates the [OdometerTransition] that transitions the [OdometerNumber] by
+  /// the given [odometerAnimation].
   const OdometerTransition({
     Key? key,
     required this.transitionIn,
@@ -71,17 +71,17 @@ class OdometerTransition extends AnimatedWidget {
     required Animation<OdometerNumber> odometerAnimation,
   }) : super(key: key, listenable: odometerAnimation);
 
-  /// А function that returns a widget for each digit of the odometer number.
+  /// The function returns a widget for each digit of the odometer number.
   /// For example, when changing the number from 6 to 7,
-  /// this function will be used on the number 6
+  /// this function will be used on the number 6.
   final OdometerAnimationTransitionBuilder transitionOut;
 
-  /// А function that returns a widget for each digit of the odometer number.
+  /// The function returns a widget for each digit of the odometer number.
   /// For example, when changing the number from 6 to 7,
-  /// this function will be used on the number 7
+  /// this function will be used on the number 7.
   final OdometerAnimationTransitionBuilder transitionIn;
 
-  /// The animation that controls the [OdometerNumber].
+  /// The animation for the [OdometerNumber].
   Animation<OdometerNumber> get odometerAnimation =>
       listenable as Animation<OdometerNumber>;
 
