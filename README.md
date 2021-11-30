@@ -1,3 +1,7 @@
+[![Build Status](https://github.com/KirsApps/odometer/workflows/build/badge.svg)](https://github.com/KirsApps/odometer/actions?query=workflow%3A"build"+branch%3Amaster)
+[![pub](https://img.shields.io/pub/v/odometer.svg)](https://pub.dev/packages/odometer)
+[![style: lint](https://img.shields.io/badge/style-lint-4BC0F5.svg)](https://pub.dev/packages/lint)
+
 # Odometer
 
 Package which was inspired by the package [Odometer js](https://github.hubspot.com/odometer/).
