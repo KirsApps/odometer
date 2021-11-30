@@ -8,11 +8,7 @@ The package which was inspired by the package [Odometer js](https://github.hubsp
 
 Examples of counter animation customization are made using this package:
 
-![Gif](https://github.com/KirsApps/odometer/blob/master/assets/1.gif "Fancy Gif")
-
-![Gif](https://github.com/KirsApps/odometer/blob/master/assets/2.gif "Fancy Gif")
-
-![Gif](https://github.com/KirsApps/odometer/blob/master/assets/3.gif "Fancy Gif")
+![Gif](https://github.com/KirsApps/odometer/blob/master/assets/preview.gif "Examples Gif")
 
 In this package you will find **pre-built** widgets:
 * AnimatedSlideOdometerNumber
