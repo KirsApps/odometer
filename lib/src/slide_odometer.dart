@@ -14,6 +14,9 @@ class AnimatedSlideOdometerNumber extends StatelessWidget {
   final double letterWidth;
 
   /// A widget that is used to separate digit groups.
+  ///
+  /// For example, if you pass the Text(',') as the separator,
+  /// the 10000 value result will be rendered as '10,000'.
   final Widget? groupSeparator;
 
   /// The digit's [TextStyle].
@@ -71,6 +74,9 @@ class SlideOdometerTransition extends StatelessWidget {
   final double letterWidth;
 
   /// A widget that is used to separate digit groups.
+  ///
+  /// For example, if you pass the Text(',') as the separator,
+  /// the 10000 value result will be rendered as '10,000'.
   final Widget? groupSeparator;
 
   /// The digit's [TextStyle].

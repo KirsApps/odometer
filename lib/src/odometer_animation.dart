@@ -7,7 +7,7 @@ import 'odometer_number.dart';
 /// the [OdometerNumber].
 ///
 /// The function should return a widget that wraps the given `value`. It may
-/// also use the `place` and the `animation` to inform its transition. It must not return null.
+/// also use the `place` and the `animation` to inform its transition.
 typedef OdometerAnimationTransitionBuilder = Widget Function(
     int value, int place, double animation);
 
