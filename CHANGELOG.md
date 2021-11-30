@@ -1,3 +1,7 @@
+## [2.1.2] - 11.30.2021.
+
+* Description updated.
+
 ## [2.1.1] - 11.30.2021.
 
 * The README and the documentation updated.
