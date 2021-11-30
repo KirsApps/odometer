@@ -12,6 +12,6 @@ dependencies:
     sdk: flutter
 
 dev_dependencies:
-  pedantic: 1.11.0
+  lint: ^1.7.2
 
 

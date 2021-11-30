@@ -14,6 +14,9 @@ dependencies:
   odometer:
     path: ../
 
+dev_dependencies:
+  lint: ^1.7.2
+
 flutter:
   uses-material-design: true
 

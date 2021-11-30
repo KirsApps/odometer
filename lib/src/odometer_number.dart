@@ -16,7 +16,7 @@ class OdometerNumber {
 
   /// Returns digits generated from the given [number].
   static Map<int, double> generateDigits(int number) {
-    var digits = <int, double>{};
+    final digits = <int, double>{};
     if (number <= 0) return {1: 0};
     var v = number;
     var place = 1;
@@ -35,10 +35,14 @@ class OdometerNumber {
   static double progress(double value) => value - value.truncate();
 
   /// Linearly interpolates between two numbers.
+  // ignore: prefer_constructors_over_static_methods
   static OdometerNumber lerp(
-      OdometerNumber start, OdometerNumber end, double t) {
-    var keyLength = max(start.digits.length, end.digits.length);
-    var digits = <int, double>{};
+    OdometerNumber start,
+    OdometerNumber end,
+    double t,
+  ) {
+    final keyLength = max(start.digits.length, end.digits.length);
+    final digits = <int, double>{};
     for (var i = 1; i <= keyLength; i++) {
       digits[i] = lerpDouble(start.digits[i], end.digits[i], t)!;
     }

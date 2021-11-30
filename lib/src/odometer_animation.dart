@@ -9,12 +9,15 @@ import 'odometer_number.dart';
 /// The function should return a widget that wraps the given `value`. It may
 /// also use the `place` and the `animation` to inform its transition.
 typedef OdometerAnimationTransitionBuilder = Widget Function(
-    int value, int place, double animation);
+  int value,
+  int place,
+  double animation,
+);
 
 /// The animated [OdometerNumber] automatically transitions from one number to another
 /// over a given duration whenever the given [odometerNumber] changes.
 class AnimatedOdometer extends ImplicitlyAnimatedWidget {
-  AnimatedOdometer({
+  const AnimatedOdometer({
     Key? key,
     required this.odometerNumber,
     required this.transitionIn,
@@ -45,17 +48,20 @@ class _AnimatedOdometerState extends AnimatedWidgetBaseState<AnimatedOdometer> {
 
   @override
   void forEachTween(TweenVisitor<dynamic> visitor) {
-    _odometerTween = visitor(_odometerTween, widget.odometerNumber,
-            (dynamic value) => OdometerTween(begin: value as OdometerNumber))
-        as OdometerTween?;
+    _odometerTween = visitor(
+      _odometerTween,
+      widget.odometerNumber,
+      (dynamic value) => OdometerTween(begin: value as OdometerNumber),
+    ) as OdometerTween?;
   }
 
   @override
   Widget build(BuildContext context) {
     return Odometer(
-        transitionOut: widget.transitionOut,
-        transitionIn: widget.transitionIn,
-        odometerNumber: _odometerTween!.evaluate(animation));
+      transitionOut: widget.transitionOut,
+      transitionIn: widget.transitionIn,
+      odometerNumber: _odometerTween!.evaluate(animation),
+    );
   }
 }
 
@@ -88,8 +94,9 @@ class OdometerTransition extends AnimatedWidget {
   @override
   Widget build(BuildContext context) {
     return Odometer(
-        transitionOut: transitionOut,
-        transitionIn: transitionIn,
-        odometerNumber: odometerAnimation.value);
+      transitionOut: transitionOut,
+      transitionIn: transitionIn,
+      odometerNumber: odometerAnimation.value,
+    );
   }
 }
