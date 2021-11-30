@@ -4,9 +4,9 @@
 
 # Odometer
 
-Package which was inspired by the package [Odometer js](https://github.hubspot.com/odometer/).
+The package which was inspired by the package [Odometer js](https://github.hubspot.com/odometer/).
 
-Examples of counter animation customization made using this package:
+Examples of counter animation customization are made using this package:
 
 ![Gif](https://github.com/KirsApps/odometer/blob/master/assets/1.gif "Fancy Gif")
 
@@ -24,8 +24,7 @@ and **high modifiable** widgets:
 
 ## AnimatedSlideOdometerNumber
 
-ImplicitlyAnimatedWidget based on AnimatedOdometer
-with a slide and fade digits transition.
+The ImplicitlyAnimatedWidget uses the AnimatedOdometer with the sliding and fading digits transitions.
 ```dart 
    AnimatedSlideOdometerNumber(
      numberTextStyle: TextStyle(fontSize: 15),
@@ -35,8 +34,8 @@ with a slide and fade digits transition.
 
 ## SlideOdometerTransition
 
-ExplicitlyAnimatedWidget based on OdometerTransition
-with a slide and fade digits transition
+The ExplicitlyAnimatedWidget uses the OdometerTransition with the sliding and fading digits transitions.
+
 ```dart 
     SlideOdometerTransition(
       numberTextStyle: TextStyle(fontSize: 15),
@@ -46,11 +45,11 @@ with a slide and fade digits transition
 
 ## Base widgets AnimatedOdometer and OdometerTransition
 
-AnimatedOdometer based on Implicit Animations and OdometerTransition based on explicit animation.
-to customize the odometer, you need to use two OdometerAnimationTransitionBuilders
-for new and old numbers you will have access to:
-* digit
-* digit place
-* animation progress of this digit
+The AnimatedOdometer is based on implicit animation, and the OdometerTransition is based on explicit animation.
+To customize the odometer, you need to use two OdometerAnimationTransitionBuilders for new and old numbers. 
+You will have access to:
+* The digit
+* The digit place
+* The animation progress of this digit
 
 

@@ -4,7 +4,7 @@ import 'odometer_animation.dart';
 import 'odometer_number.dart';
 
 /// The [ImplicitlyAnimatedWidget] uses the [AnimatedOdometer]
-/// with the slide and fade digits transitions.
+/// with the sliding and fading digits transitions.
 class AnimatedSlideOdometerNumber extends StatelessWidget {
   final OdometerNumber odometerNumber;
   final Duration duration;
@@ -68,7 +68,7 @@ class AnimatedSlideOdometerNumber extends StatelessWidget {
 }
 
 /// The ExplicitlyAnimatedWidget uses the [OdometerTransition]
-/// with the slide and fade digits transition.
+/// with the sliding and fading digits transitions.
 class SlideOdometerTransition extends StatelessWidget {
   final Animation<OdometerNumber> odometerAnimation;
 
