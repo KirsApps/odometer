@@ -8,7 +8,7 @@ The package which was inspired by the package [Odometer js](https://github.hubsp
 
 Examples of counter animation customization are made using this package:
 
-<p align="center">
+<p align="left">
 <img src="https://github.com/KirsApps/odometer/blob/master/assets/preview.gif" height="350" alt="Examples Gif" />
 </p>
 
