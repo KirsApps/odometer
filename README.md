@@ -1,5 +1,6 @@
 [![Build Status](https://github.com/KirsApps/odometer/workflows/build/badge.svg)](https://github.com/KirsApps/odometer/actions?query=workflow%3A"build"+branch%3Amaster)
 [![pub](https://img.shields.io/pub/v/odometer.svg)](https://pub.dev/packages/odometer)
+[![stars](https://img.shields.io/github/stars/KirsApps/odometer.svg?style=flat&logo=github&colorB=deeppink&label=stars)](https://github.com/KirsApps/odometer)
 [![style: lint](https://img.shields.io/badge/style-lint-4BC0F5.svg)](https://pub.dev/packages/lint)
 
 # Odometer
