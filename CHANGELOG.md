@@ -1,3 +1,7 @@
+## [2.1.3] - 12.1.2021.
+
+* Preview gifs updated.
+
 ## [2.1.2] - 11.30.2021.
 
 * Description updated.

@@ -1,6 +1,6 @@
 name: odometer
 description: Highly customizable widgets that you can use for the number transition and the counter animations.
-version: 2.1.2
+version: 2.1.3
 homepage: https://github.com/KirsApps/odometer
 
 environment:
