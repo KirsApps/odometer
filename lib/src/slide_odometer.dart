@@ -1,7 +1,6 @@
 import 'package:flutter/widgets.dart';
-
-import 'odometer_animation.dart';
-import 'odometer_number.dart';
+import 'package:odometer/src/odometer_animation.dart';
+import 'package:odometer/src/odometer_number.dart';
 
 /// The [ImplicitlyAnimatedWidget] uses the [AnimatedOdometer]
 /// with the sliding and fading digits transitions.

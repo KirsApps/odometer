@@ -1,7 +1,6 @@
 import 'package:flutter/widgets.dart';
-
-import 'odometer.dart';
-import 'odometer_number.dart';
+import 'package:odometer/src/odometer.dart';
+import 'package:odometer/src/odometer_number.dart';
 
 /// The signature for builders used to generate custom transitions for
 /// the [OdometerNumber].
@@ -40,6 +39,7 @@ class AnimatedOdometer extends ImplicitlyAnimatedWidget {
   final OdometerAnimationTransitionBuilder transitionIn;
 
   @override
+  // ignore: library_private_types_in_public_api
   _AnimatedOdometerState createState() => _AnimatedOdometerState();
 }
 
