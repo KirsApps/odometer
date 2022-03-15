@@ -1,3 +1,7 @@
+## [3.0.0] - 3.15.2022.
+
+* OdometerTween keeps leading zeros if an end odometer number is smaller than a beginning number.
+
 ## [2.1.3] - 12.1.2021.
 
 * Preview gifs updated.
