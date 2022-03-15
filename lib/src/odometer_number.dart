@@ -68,6 +68,24 @@ class OdometerTween extends Tween<OdometerNumber> {
   OdometerTween({OdometerNumber? begin, OdometerNumber? end})
       : super(begin: begin, end: end);
 
+  @override
+  OdometerNumber transform(double t) {
+    if (t == 0.0) {
+      return begin!;
+    }
+    if (t == 1.0) {
+      if (begin!.digits.keys.length > end!.digits.keys.length) {
+        end!.digits.addEntries(
+          begin!.digits.keys.toSet().difference(end!.digits.keys.toSet()).map(
+                (e) => MapEntry(e, 0),
+              ),
+        );
+      }
+      return end!;
+    }
+    return lerp(t);
+  }
+
   /// Returns the value this variable has at the given animation clock value.
   @override
   OdometerNumber lerp(double t) => OdometerNumber.lerp(begin!, end!, t);
